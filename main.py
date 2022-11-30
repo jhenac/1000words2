@@ -12,7 +12,6 @@ driver = webdriver.Chrome(service=service)
 driver.maximize_window()
 driver.get(url)
 
-data = []
 tables = driver.find_elements(By.CSS_SELECTOR, "table")
 with open(f"{language}_words.csv", "w", newline='') as f:
     writer = csv.writer(f)
